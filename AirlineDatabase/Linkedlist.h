@@ -1,5 +1,10 @@
+
+#ifndef LINKEDLIST
+#define LINKEDLIST
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "Functions.h"
 
 // Node
 struct passenger {
@@ -7,7 +12,7 @@ struct passenger {
 	char firstName[20];
 	char secondName[20];
 	int yearBorn;
-	char emailAdd[30];
+	char email[30];
 	int region;
 	int travelClass;
 	int tripCount;
@@ -18,10 +23,12 @@ struct passenger {
 
 // Function prototypes
 int displayMenu();
-void addStudentAtStart(struct passenger** top);
-void addStudentAtEnd(struct passenger* top);
+void addPassengerAtStart(struct passenger** top);
+void addPassengerAtEnd(struct passenger* top);
 void displayList(struct passenger* top);
 int listLength(struct passenger* top);
 void deleteStudentAtEnd(struct passenger* top);
 void searchStudent(struct passenger* top);
 void deleteStudentAtStart(struct passenger** top);
+
+#endif // !LINKEDLIST

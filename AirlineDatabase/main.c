@@ -1,10 +1,13 @@
-#include "Header.h"
+#include "Linkedlist.h"
 
 // Main
 void main() {
 	struct passenger* headPtr = NULL;
+	struct passenger* tailPtr = NULL;
 	int choice;
 	int position;
+
+	choice = displayMenu();
 
 	while (choice != -1) {
 		switch (choice) {
@@ -58,15 +61,7 @@ void main() {
 			printf("Please enter 1 to 6 only or -1 to exit.\n");
 		} // switch
 
-		printf("1. Add a student to the end of the list.\n");
-		printf("2. Add a student to the top of the list.\n");
-		printf("3. Delete a student from the end of the list.\n");
-		printf("4. Display all of the students in the list.\n");
-		printf("5. Search the list for a student's specified ID.\n");
-		printf("6. Delete a student from the start of the list.\n");
-		printf("-1. Exit.\n");
-		printf("Please enter one of the following options: ");
-		scanf("%d", &choice);
+		choice = displayMenu();
 	} // while
 
 	getch();
