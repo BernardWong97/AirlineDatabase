@@ -15,8 +15,8 @@ struct passenger {
 	char email[30];
 	int region;
 	int travelClass;
-	int tripCount;
-	int duration;
+	char tripCount;
+	char duration;
 	struct passenger* next;
 	struct passenger* previous;
 };
