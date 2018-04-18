@@ -1,30 +1,12 @@
 #include "Linkedlist.h"
 
-int displayMenu() {
-	int choice;
-
-	printf("1. Add a passenger.\n");
-	printf("2. Display all passenger.\n");
-	printf("3. Display passenger details.\n");
-	printf("4. Update a passenger statistic.\n");
-	printf("5. Delete a passenger.\n");
-	printf("6. Generate statistics.\n");
-	printf("7. Print all passenger details into a report file.\n");
-	printf("8. List all the passenger from UK in order of year born.\n");
-	printf("-1. Exit.\n");
-	printf("\nPlease enter one of the following options: ");
-	scanf("%d", &choice);
-
-	return choice;
-}
-
-void addPassengerAtStart(struct passenger** top, struct node** bottom) {
+void addPassengerAtStart(struct passenger** top, struct passenger** bottom) {
 	struct passenger* newNode;
 	struct passenger* temp;
 
 	newNode = (struct passenger*)malloc(sizeof(struct passenger));
 
-	addPassenger(newNode);
+	inputPassenger(newNode);
 
 	temp = *top;
 
@@ -44,48 +26,59 @@ void addPassengerAtStart(struct passenger** top, struct node** bottom) {
 	printf("Passenger Successfully Added.\n");
 } // addPassengerAtStart()
 
-void addPassengerAtEnd(struct passenger** top, struct passenger** bottom) {
-	struct passenger* newNode;
-	struct passenger* temp;
-
-	newNode = (struct passenger*)malloc(sizeof(struct passenger));
-
-	inputPassenger(newNode);
-
-	temp = *bottom;
-
+void addPassenger(struct passenger** top, struct passenger** bottom) {
 	if (*bottom == NULL) {
-		addElementAtStart(top, bottom);
+		addPassengerAtStart(top, bottom);
 	}
 	else {
+		struct passenger* newNode;
+		struct passenger* temp;
+
+		newNode = (struct passenger*)malloc(sizeof(struct passenger));
+
+		temp = *bottom;
+		inputPassenger(newNode);
 		newNode->next = NULL;
 		newNode->previous = temp;
 		temp->next = newNode;
 		*bottom = newNode;
+		printf("Passenger Successfully Added.\n");
 	}
-	printf("Passenger Successfully Added.\n");
 } // addPassengerAtEnd()
 
-//void displayList(struct passenger* top) {
-//	struct passenger* temp;
-//
-//	temp = top;
-//
-//	printf("\nStudent Database:\n");
-//
-//	while (temp != NULL) {
-//		printf("Name: %s\n", temp->name);
-//		printf("Age: %d\n", temp->age);
-//		printf("ID: %s\n", temp->id);
-//		printf("Average Grade: %f\n", temp->averageGrade);
-//		printf("Email: %s\n", temp->email);
-//		printf("Mobile: %s\n", temp->mobile);
-//		temp = temp->next;
-//	} // while
-//
-//	printf("\n");
-//} // displayList()
-//
+void displayList(struct passenger* top) {
+	struct passenger* temp;
+	int passengerCount = 0;
+	char region[15];
+	char travelClass[16];
+	char tripCount[32];
+	char duration[18];
+
+	temp = top;
+
+	printf("\nPassenger Database:\n");
+
+	while (temp != NULL) {
+		printf("==Passenger %d==\n", passengerCount);
+		printf("Passport Number: %d\n", temp->passportNum);
+		printf("First Name: %s\n", temp->firstName);
+		printf("Second Name: %s\n", temp->secondName);
+		printf("Year Born: %d\n", temp->yearBorn);
+		printf("Email Address: %s\n", temp->email);
+		strcpy(region, getRegion(temp->region));
+		strcpy(travelClass, getTravelClass(temp->travelClass));
+		strcpy(tripCount, getTripCount(temp->tripCount));
+		strcpy(duration, getDuration(temp->duration));
+		printf("Region: %s\n", region);
+		printf("Travel Class: %s\n", travelClass);
+		printf("Trip Count to Ireland: %s\n", tripCount);
+		printf("Stay Duration: %s\n", duration);
+		printf("================\n");
+		temp = temp->next;
+		passengerCount++;
+	} // while
+} // displayList()
+
 //int listLength(struct passenger* top) {
 //	struct passenger* temp;
 //	int count = 0;

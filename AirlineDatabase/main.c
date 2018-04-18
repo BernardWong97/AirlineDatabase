@@ -7,58 +7,37 @@ void main() {
 	int choice;
 	int position;
 
+	printf("========= XYZ Airport Passenger Statistic Application =========\n");
 	choice = displayMenu();
 
 	while (choice != -1) {
 		switch (choice) {
 		case 1:
-			// If list empty, add first element
-			if (headPtr == NULL) {
-				addStudentAtStart(&headPtr);
-			}
-			else {
-				addStudentAtEnd(headPtr);
-			} // if..else
+			addPassenger(&headPtr, &tailPtr);
 			break;
 		case 2:
-			addStudentAtStart(&headPtr);
-			break;
-		case 3:
-			// If list empty, output message
 			if (headPtr == NULL) {
-				printf("\nNo element in the list\n");
-			}
-			else if (headPtr->next != NULL) {
-				deleteStudentAtEnd(headPtr);
-			}
-			else {
-				deleteStudentAtStart(&headPtr);
-			} // if..else
-			break;
-		case 4:
-			// If list empty, output message
-			if (headPtr == NULL) {
-				printf("\nNo element in the list\n");
+				printf("\nThe database is empty.\n");
 			}
 			else {
 				displayList(headPtr);
-			} // if..else
+			}
+			break;
+		case 3:
+			break;
+		case 4:
 			break;
 		case 5:
-			searchStudent(headPtr);
 			break;
 		case 6:
-			// If list empty, output message
-			if (headPtr == NULL) {
-				printf("\nNo element in the list\n");
-			}
-			else {
-				deleteStudentAtStart(&headPtr);
-			} // if..else
+			break;
+		case 7:
+			break;
+		case 8:
 			break;
 		default:
 			// Validation
-			printf("Please enter 1 to 6 only or -1 to exit.\n");
+			printf("Please enter 1 to 8 only or -1 to exit.\n");
 		} // switch
 
 		choice = displayMenu();
