@@ -1,54 +1,65 @@
 #include "Linkedlist.h"
 
-void addPassengerAtStart(struct passenger** top, struct passenger** bottom) {
+void addPassengerAtStart(struct passenger** top, struct passenger** bottom, struct passenger* newNode) {
+	struct passenger* temp;
+
+	temp = *top;
+
+	newNode->next = NULL;
+	newNode->previous = NULL;
+	*top = newNode;
+	*bottom = newNode;
+} // addPassengerAtStart()
+
+void addPassenger(struct passenger** top, struct passenger** bottom) {
 	struct passenger* newNode;
 	struct passenger* temp;
+	struct passenger* temp2;
 
 	newNode = (struct passenger*)malloc(sizeof(struct passenger));
 
 	inputPassenger(newNode);
 
-	temp = *top;
-
 	if (*top == NULL) {
-		newNode->next = NULL;
-		newNode->previous = NULL;
-		*top = newNode;
-		*bottom = newNode;
+		addPassengerAtStart(top, bottom, newNode);
 	}
 	else {
-		newNode->previous = NULL;
-		newNode->next = temp;
-		temp->previous = newNode;
-		*top = newNode;
-	}
+		temp = *top;
 
-	printf("Passenger Successfully Added.\n");
-} // addPassengerAtStart()
+		while (newNode->passportNum > temp->passportNum) {
+			temp2 = temp;
+			temp = temp->next;
 
-void addPassenger(struct passenger** top, struct passenger** bottom) {
-	if (*bottom == NULL) {
-		addPassengerAtStart(top, bottom);
-	}
-	else {
-		struct passenger* newNode;
-		struct passenger* temp;
-
-		newNode = (struct passenger*)malloc(sizeof(struct passenger));
-
-		temp = *bottom;
-		inputPassenger(newNode);
-		newNode->next = NULL;
-		newNode->previous = temp;
-		temp->next = newNode;
-		*bottom = newNode;
+			if (temp == NULL)
+				break;
+		}
+			
+		if (temp == NULL) {
+			newNode->next = NULL;
+			newNode->previous = temp2;
+			temp2->next = newNode;
+			*bottom = newNode;
+		}
+		else {
+			newNode->next = temp;
+			newNode->previous = temp->previous;
+			temp2 = temp->previous;
+			if (temp2 == NULL) {
+				*top = newNode;
+			}
+			else {
+				temp2->next = newNode;
+			}
+			temp->previous = newNode;
+		}
+		
 		printf("Passenger Successfully Added.\n");
 	}
 } // addPassengerAtEnd()
 
 void displayList(struct passenger* top) {
 	struct passenger* temp;
-	int passengerCount = 0;
+	int passengerCount = 1;
 	char region[15];
 	char travelClass[16];
 	char tripCount[32];

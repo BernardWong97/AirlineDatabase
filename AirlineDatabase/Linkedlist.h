@@ -21,7 +21,7 @@ struct passenger {
 };
 
 // Function prototypes
-void addPassengerAtStart(struct passenger** top, struct passenger** bottom);
+void addPassengerAtStart(struct passenger** top, struct passenger** bottom, struct passenger* newNode);
 void addPassenger(struct passenger** top, struct passenger** bottom);
 void displayList(struct passenger* top);
 //int listLength(struct passenger* top);
