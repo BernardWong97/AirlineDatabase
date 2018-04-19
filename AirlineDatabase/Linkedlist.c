@@ -18,7 +18,7 @@ void addPassenger(struct passenger** top, struct passenger** bottom) {
 
 	newNode = (struct passenger*)malloc(sizeof(struct passenger));
 
-	inputPassenger(newNode);
+	inputPassenger(newNode, top);
 
 	if (*top == NULL) {
 		addPassengerAtStart(top, bottom, newNode);
@@ -55,6 +55,7 @@ void addPassenger(struct passenger** top, struct passenger** bottom) {
 		
 		printf("Passenger Successfully Added.\n");
 	}
+
 } // addPassengerAtEnd()
 
 void displayList(struct passenger* top) {

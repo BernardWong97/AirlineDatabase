@@ -7,7 +7,8 @@
 #include "Linkedlist.h"
 
 int displayMenu();
-void inputPassenger(struct passenger* newNode);
+void inputPassenger(struct passenger* newNode, struct passenger** top);
+int validatePassport(int passportNum, struct passenger** top);
 int validateEmail(char email[30]);
 int regionMenu();
 char* getRegion(int num);

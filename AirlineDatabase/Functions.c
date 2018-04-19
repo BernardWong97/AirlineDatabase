@@ -20,13 +20,24 @@ int displayMenu() {
 	return choice;
 }
 
-void inputPassenger(struct passenger* newNode) {
+void inputPassenger(struct passenger* newNode, struct passenger** top) {
+	int passportNum;
+	int passportValidate = 1;
 	char emailAddress[30];
-	int emailValidate;
+	int emailValidate = 0;
 
 	printf("\nPlease enter the following:\n");
 	printf("Passport Number: ");
-	scanf("%d", &newNode->passportNum);
+	scanf("%d", &passportNum);
+	if (*top != NULL)
+		passportValidate = validatePassport(passportNum, top);
+	while (passportValidate != 1) {
+		printf("Passport number already exists in the database, please try again.\n");
+		printf("Passport Number: ");
+		scanf("%d", &passportNum);
+		passportValidate = validatePassport(passportNum, top);
+	}
+	newNode->passportNum = passportNum;
 	printf("First Name: ");
 	scanf("%s", newNode->firstName);
 	printf("Second Name: ");
@@ -47,6 +58,19 @@ void inputPassenger(struct passenger* newNode) {
 	newNode->travelClass = travelClassMenu();
 	newNode->tripCount = tripCountMenu();
 	newNode->duration = durationMenu();
+}
+
+int validatePassport(int passportNum, struct passenger** top) {
+	struct passenger* temp;
+
+	temp = *top;
+
+	while (temp != NULL) {
+		if (passportNum == temp->passportNum)
+			return 0;
+		temp = temp->next;
+	}
+	return 1;
 }
 
 int validateEmail(char email[30]) {
