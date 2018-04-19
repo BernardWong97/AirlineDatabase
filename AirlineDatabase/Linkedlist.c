@@ -68,10 +68,10 @@ void displayList(struct passenger* top) {
 
 	temp = top;
 
-	printf("\nPassenger Database:\n");
+	printf("\nPassenger Database:");
 
 	while (temp != NULL) {
-		printf("==Passenger %d==\n", passengerCount);
+		printf("\n==Passenger %d==\n", passengerCount);
 		printf("Passport Number: %d\n", temp->passportNum);
 		printf("First Name: %s\n", temp->firstName);
 		printf("Second Name: %s\n", temp->secondName);
@@ -106,7 +106,7 @@ void displayIndexPassenger(struct passenger* top, int index) {
 		temp = temp->next;
 	} // while
 
-	printf("==Passenger %d==\n", index + 1);
+	printf("\n==Passenger %d==\n", index + 1);
 	printf("Passport Number: %d\n", temp->passportNum);
 	printf("First Name: %s\n", temp->firstName);
 	printf("Second Name: %s\n", temp->secondName);

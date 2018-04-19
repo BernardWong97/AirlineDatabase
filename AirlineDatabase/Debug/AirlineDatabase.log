@@ -5,8 +5,8 @@ c:\users\asus\source\repos\airlinedatabase\airlinedatabase\search.c(15): warning
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
 c:\users\asus\source\repos\airlinedatabase\airlinedatabase\search.c(35): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\search.c(70): warning C4013: 'strcpy' undefined; assuming extern returning int
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\search.c(71): warning C4013: 'strcmp' undefined; assuming extern returning int
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\search.c(67): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\search.c(69): warning C4013: 'strcpy' undefined; assuming extern returning int
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\search.c(70): warning C4013: 'strcmp' undefined; assuming extern returning int
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\search.c(66): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
   AirlineDatabase.vcxproj -> C:\Users\ASUS\source\repos\AirlineDatabase\Debug\AirlineDatabase.exe

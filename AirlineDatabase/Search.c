@@ -46,7 +46,6 @@ void passportSearch(struct passenger* top) {
 	} // for
 
 	if (found == 1) {
-		printf("\n==Passenger Found==\n");
 		displayIndexPassenger(top, count);
 	}
 	else {
@@ -66,23 +65,17 @@ void nameSearch(struct passenger* top) {
 	printf("\nPlease enter first name: ");
 	scanf("%s", name);
 
-	for (int i = 0; i < listLength(top); i++) {
+	while (count != listLength(top)) {
 		strcpy(firstName, temp->firstName);
 		if (strcmp(firstName, name) == 0) {
 			found = 1;
-			i = listLength(top);
+			displayIndexPassenger(top, count);
 		}
-		else {
-			temp = temp->next;
-			count++;
-		} // if..else
-	} // for
-
-	if (found == 1) {
-		printf("\n==Passenger Found==\n");
-		displayIndexPassenger(top, count);
+		temp = temp->next;
+		count++;
 	}
-	else {
+
+	if (found != 1) {
 		printf("The passenger does not exist in the database.\n");
 	}
 }
