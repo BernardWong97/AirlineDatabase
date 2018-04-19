@@ -60,6 +60,27 @@ void inputPassenger(struct passenger* newNode, struct passenger** top) {
 	newNode->duration = durationMenu();
 }
 
+void updateDetails(struct passenger* temp) {
+	char emailAddress[30];
+	int emailValidate = 0;
+
+	printf("\nPlease enter the following:\n");
+	printf("Email Address: ");
+	scanf("%s", emailAddress);
+	emailValidate = validateEmail(emailAddress);
+	while (emailValidate != 5) {
+		printf("Invalid email address, must contain an '@' and '.com'\n");
+		printf("Email Address: ");
+		scanf("%s", emailAddress);
+		emailValidate = validateEmail(emailAddress);
+	}
+	strcpy(temp->email, emailAddress);
+	temp->region = regionMenu();
+	temp->travelClass = travelClassMenu();
+	temp->tripCount = tripCountMenu();
+	temp->duration = durationMenu();
+}
+
 int validatePassport(int passportNum, struct passenger** top) {
 	struct passenger* temp;
 

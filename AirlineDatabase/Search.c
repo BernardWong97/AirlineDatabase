@@ -1,7 +1,8 @@
 #include "Search.h"
 
-void searchPassenger(struct passenger* top) {
+int searchPassenger(struct passenger* top) {
 	int choice;
+	int index;
 
 	printf("\nWhich do you wish to search by:\n");
 	printf("(1) Passport Number\n");
@@ -16,14 +17,16 @@ void searchPassenger(struct passenger* top) {
 	}
 
 	if (choice == 1) {
-		passportSearch(top);
+		index = passportSearch(top);
 	}
 	else {
-		nameSearch(top);
+		index = nameSearch(top);
 	}
+
+	return index;
 }
 
-void passportSearch(struct passenger* top) {
+int passportSearch(struct passenger* top) {
 	struct passenger* temp;
 	int passportNum;
 	int found = 0;
@@ -47,13 +50,16 @@ void passportSearch(struct passenger* top) {
 
 	if (found == 1) {
 		displayIndexPassenger(top, count);
+		return count;
 	}
 	else {
 		printf("The passenger does not exist in the database.\n");
 	}
+
+	return -1;
 }
 
-void nameSearch(struct passenger* top) {
+int nameSearch(struct passenger* top) {
 	struct passenger* temp;
 	char sFirstName[20];
 	char sSecondName[20];
@@ -88,8 +94,11 @@ void nameSearch(struct passenger* top) {
 
 	if (found == 1) {
 		displayIndexPassenger(top, count);
+		return count;
 	}
 	else {
 		printf("The passenger does not exist in the database.\n");
 	}
+
+	return -1;
 }

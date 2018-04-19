@@ -3,8 +3,8 @@
 
 #include "Linkedlist.h"
 
-void searchPassenger(struct passenger* top);
-void passportSearch(struct passenger* top);
-void nameSearch(struct passenger* top);
+int searchPassenger(struct passenger* top);
+int passportSearch(struct passenger* top);
+int nameSearch(struct passenger* top);
 
 #endif

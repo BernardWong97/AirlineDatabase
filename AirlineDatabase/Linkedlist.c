@@ -137,6 +137,25 @@ int listLength(struct passenger* top) {
 	return count;
 } // listLength()
 
+void updatePassenger(struct passenger* top) {
+	int count = 0;
+	int index;
+	struct passenger* temp;
+
+	index = searchPassenger(top);
+	temp = top;
+
+	if (index != -1) {
+		while (count != index) {
+			temp = temp->next;
+			count++;
+		}
+
+		updateDetails(temp);
+	}
+	
+}
+
 //void deleteStudentAtEnd(struct passenger* top) {
 //	struct passenger* temp;
 //	struct passenger* prev;
