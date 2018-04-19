@@ -5,7 +5,7 @@ void searchPassenger(struct passenger* top) {
 
 	printf("\nWhich do you wish to search by:\n");
 	printf("(1) Passport Number\n");
-	printf("(2) First Name\n");
+	printf("(2) Full Name\n");
 	printf("Please enter your choice: ");
 	scanf("%d", &choice);
 
@@ -55,27 +55,41 @@ void passportSearch(struct passenger* top) {
 
 void nameSearch(struct passenger* top) {
 	struct passenger* temp;
-	char name[20];
+	char sFirstName[20];
+	char sSecondName[20];
+	char sFullName[40];
 	char firstName[20];
+	char secondName[20];
+	char fullName[40];
 	int found = 0;
 	int count = 0;
 
 	temp = top;
 
 	printf("\nPlease enter first name: ");
-	scanf("%s", name);
+	scanf("%s", sFirstName);
+	printf("Please enter second name: ");
+	scanf("%s", sSecondName);
+	strcpy(sFullName, strcat(sFirstName, sSecondName));
 
-	while (count != listLength(top)) {
+	for (int i = 0; i < listLength(top); i++) {
 		strcpy(firstName, temp->firstName);
-		if (strcmp(firstName, name) == 0) {
+		strcpy(secondName, temp->secondName);
+		strcpy(fullName, strcat(firstName, secondName));
+		if (strcmp(fullName, sFullName) == 0) {
 			found = 1;
-			displayIndexPassenger(top, count);
+			i = listLength(top);
 		}
-		temp = temp->next;
-		count++;
-	}
+		else {
+			temp = temp->next;
+			count++;
+		} // if..else
+	} // for
 
-	if (found != 1) {
+	if (found == 1) {
+		displayIndexPassenger(top, count);
+	}
+	else {
 		printf("The passenger does not exist in the database.\n");
 	}
 }
