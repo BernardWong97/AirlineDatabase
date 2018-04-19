@@ -8,6 +8,7 @@ void main() {
 	int position;
 
 	printf("========= XYZ Airport Passenger Statistic Application =========\n");
+	initLinkedList(&headPtr, &tailPtr);
 	choice = displayMenu();
 
 	while (choice != -1) {

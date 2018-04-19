@@ -1,3 +1,22 @@
-﻿  Linkedlist.c
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(80): warning C4013: 'strcpy' undefined; assuming extern returning int
+﻿  FileHandling.c
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(7): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(28): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(29): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(30): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(31): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(32): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(33): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(34): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(35): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(36): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1195): note: see declaration of 'fscanf'
   AirlineDatabase.vcxproj -> C:\Users\ASUS\source\repos\AirlineDatabase\Debug\AirlineDatabase.exe

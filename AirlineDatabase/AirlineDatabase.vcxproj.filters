@@ -27,6 +27,9 @@
     <ClCompile Include="Search.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FileHandling.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Functions.h">
@@ -38,5 +41,13 @@
     <ClInclude Include="Search.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FileHandling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="passenger.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

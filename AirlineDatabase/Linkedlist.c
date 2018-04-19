@@ -1,10 +1,6 @@
 #include "Linkedlist.h"
 
 void addPassengerAtStart(struct passenger** top, struct passenger** bottom, struct passenger* newNode) {
-	struct passenger* temp;
-
-	temp = *top;
-
 	newNode->next = NULL;
 	newNode->previous = NULL;
 	*top = newNode;
