@@ -30,6 +30,7 @@ void main() {
 			updatePassenger(headPtr);
 			break;
 		case 5:
+			deletePassenger(&headPtr, &tailPtr);
 			break;
 		case 6:
 			break;

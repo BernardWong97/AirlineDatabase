@@ -138,9 +138,9 @@ int listLength(struct passenger* top) {
 } // listLength()
 
 void updatePassenger(struct passenger* top) {
+	struct passenger* temp;
 	int count = 0;
 	int index;
-	struct passenger* temp;
 
 	index = searchPassenger(top);
 	temp = top;
@@ -156,30 +156,41 @@ void updatePassenger(struct passenger* top) {
 	
 }
 
-//void deleteStudentAtEnd(struct passenger* top) {
-//	struct passenger* temp;
-//	struct passenger* prev;
-//
-//	temp = top;
-//
-//	while (temp->next != NULL) {
-//		prev = temp;
-//		temp = temp->next;
-//	} // while
-//
-//	printf("\Student ID [%d] Successfully Deleted.\n", temp->id);
-//
-//	prev->next = NULL;
-//	free(temp);
-//} // deleteElementAtEnd()
-//
-//void deleteStudentAtStart(struct passenger** top) {
-//	struct passenger* temp;
-//
-//	temp = *top;
-//
-//	*top = temp->next;
-//
-//	printf("\nStudent ID [%d] Successfully Deleted.\n", temp->id);
-//	free(temp);
-//} // deleteElementAtStart()
+void deletePassenger(struct passenger** top, struct passenger** bottom) {
+	struct passenger* temp;
+	struct passenger* temp2;
+	int count = 0;
+	int index;
+
+	index = searchPassenger(*top);
+	temp = *top;
+
+	if (index != -1) {
+		while (count != index) {
+			temp = temp->next;
+			count++;
+		}
+
+		if ((*top)->next == NULL) {
+			*top = NULL;
+			*bottom = NULL;
+		}
+		else if (index == 0) {
+			*top = temp->next;
+			(*top)->previous = NULL;
+		}
+		else if (index == listLength(*top) - 1) {
+			*bottom = temp->previous;
+			(*bottom)->next = NULL;
+		}
+		else {
+			temp2 = temp->previous;
+			temp2->next = temp->next;
+			temp2 = temp->next;
+			temp2->previous = temp->previous;
+		}
+
+		free(temp);
+		printf("\nPassenger Successfully Deleted.\n");
+	}
+}
