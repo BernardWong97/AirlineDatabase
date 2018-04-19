@@ -1,8 +1,5 @@
 #ifndef FUNCTIONS
 #define FUNCTIONS
-	
-#include <stdio.h>
-#include <stdlib.h>
 
 #include "Linkedlist.h"
 

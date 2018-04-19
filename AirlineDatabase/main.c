@@ -24,6 +24,7 @@ void main() {
 			}
 			break;
 		case 3:
+			searchPassenger(headPtr);
 			break;
 		case 4:
 			break;

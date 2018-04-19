@@ -91,21 +91,52 @@ void displayList(struct passenger* top) {
 	} // while
 } // displayList()
 
-//int listLength(struct passenger* top) {
-//	struct passenger* temp;
-//	int count = 0;
-//
-//	temp = top;
-//
-//	while (temp != NULL) {
-//		count++;
-//		temp = temp->next;
-//	} // while
-//
-//	return count;
-//} // displayListLength()
-//
-//
+void displayIndexPassenger(struct passenger* top, int index) {
+	struct passenger* temp;
+	int count = 0;
+	char region[15];
+	char travelClass[16];
+	char tripCount[32];
+	char duration[18];
+
+	temp = top;
+
+	while (count != index) {
+		count++;
+		temp = temp->next;
+	} // while
+
+	printf("==Passenger %d==\n", index + 1);
+	printf("Passport Number: %d\n", temp->passportNum);
+	printf("First Name: %s\n", temp->firstName);
+	printf("Second Name: %s\n", temp->secondName);
+	printf("Year Born: %d\n", temp->yearBorn);
+	printf("Email Address: %s\n", temp->email);
+	strcpy(region, getRegion(temp->region));
+	strcpy(travelClass, getTravelClass(temp->travelClass));
+	strcpy(tripCount, getTripCount(temp->tripCount));
+	strcpy(duration, getDuration(temp->duration));
+	printf("Region: %s\n", region);
+	printf("Travel Class: %s\n", travelClass);
+	printf("Trip Count to Ireland: %s\n", tripCount);
+	printf("Stay Duration: %s\n", duration);
+	printf("================\n");
+}
+
+int listLength(struct passenger* top) {
+	struct passenger* temp;
+	int count = 0;
+
+	temp = top;
+
+	while (temp != NULL) {
+		count++;
+		temp = temp->next;
+	} // while
+
+	return count;
+} // listLength()
+
 //void deleteStudentAtEnd(struct passenger* top) {
 //	struct passenger* temp;
 //	struct passenger* prev;
@@ -122,36 +153,6 @@ void displayList(struct passenger* top) {
 //	prev->next = NULL;
 //	free(temp);
 //} // deleteElementAtEnd()
-//
-//void searchStudent(struct passenger* top) {
-//	struct passenger* temp;
-//	int id;
-//	int found = 0;
-//	int count = 1;
-//
-//	temp = top;
-//
-//	printf("\nPlease enter the ID of the student: ");
-//	scanf("%d", &id);
-//
-//	for (int i = 0; i < listLength(top); i++) {
-//		if (temp->id == id) {
-//			found = 1;
-//			i = listLength(top);
-//		}
-//		else {
-//			temp = temp->next;
-//			count++;
-//		} // if..else
-//	} // for
-//
-//	if (found == 1) {
-//		printf("Student ID [%d] is at index %d of the list.\n", id, count);
-//	}
-//	else {
-//		printf("Student ID [%d] is not in the list.\n", id);
-//	} // if..else
-//} // searchElement()
 //
 //void deleteStudentAtStart(struct passenger** top) {
 //	struct passenger* temp;

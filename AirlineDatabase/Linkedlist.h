@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 #include "Functions.h"
+#include "Search.h"
 
 // Node
 struct passenger {
@@ -24,9 +25,9 @@ struct passenger {
 void addPassengerAtStart(struct passenger** top, struct passenger** bottom, struct passenger* newNode);
 void addPassenger(struct passenger** top, struct passenger** bottom);
 void displayList(struct passenger* top);
-//int listLength(struct passenger* top);
+void displayIndexPassenger(struct passenger* top, int index);
+int listLength(struct passenger* top);
 //void deleteStudentAtEnd(struct passenger* top);
-//void searchStudent(struct passenger* top);
 //void deleteStudentAtStart(struct passenger** top);
 
 #endif // !LINKEDLIST
