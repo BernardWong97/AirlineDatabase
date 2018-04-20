@@ -47,5 +47,6 @@ void main() {
 		choice = displayMenu();
 	} // while
 
+	updateLinkedList(headPtr);
 	getch();
 } // main()

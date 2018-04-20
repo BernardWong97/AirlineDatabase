@@ -7,4 +7,5 @@
 #define REPORT "report.txt"
 
 void initLinkedList(struct passenger** top, struct passenger** bottom);
+void updateLinkedList(struct passenger* top);
 #endif

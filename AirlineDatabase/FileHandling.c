@@ -13,13 +13,13 @@ void initLinkedList(struct passenger** top, struct passenger** bottom) {
 	}
 	else {
 		printf("Loading Data From Database");
-		Sleep(500);
+		Sleep(250);
 		printf(".");
-		Sleep(500);
+		Sleep(250);
 		printf(".");
-		Sleep(500);
+		Sleep(250);
 		printf(".");
-		Sleep(500);
+		Sleep(250);
 		printf("\n");
 
 		while (!feof(fileptr)) {
@@ -49,13 +49,41 @@ void initLinkedList(struct passenger** top, struct passenger** bottom) {
 				temp->next = newNode;
 				*bottom = newNode;
 			}
-
-			if ((c = fgetc(fileptr)) == EOF)
+			
+			if ((c = fgetc(fileptr)) == EOF || (c = fgetc(fileptr)) == '\n')
 				break;
 			ungetc(c, fileptr);
 		}
 
 		printf("Loading Complete.");
+		fclose(fileptr);
+	}
+}
+
+void updateLinkedList(struct passenger* top) {
+	FILE* fileptr;
+	struct passenger* temp;
+	fileptr = fopen(PASSENGER, "w");
+	temp = top;
+
+	if (fileptr == NULL) {
+		printf("!- Warning -!\n");
+		printf("!- The File \"passenger.txt\" Does Not Exist -!\n");
+	}
+	else {
+		while (temp != NULL) {
+			fprintf(fileptr, "%d\n", temp->passportNum);
+			fprintf(fileptr, "%s\n", temp->firstName);
+			fprintf(fileptr, "%s\n", temp->secondName);
+			fprintf(fileptr, "%d\n", temp->yearBorn);
+			fprintf(fileptr, "%s\n", temp->email);
+			fprintf(fileptr, "%d\n", temp->region);
+			fprintf(fileptr, "%d\n", temp->travelClass);
+			fprintf(fileptr, "%c\n", temp->tripCount);
+			fprintf(fileptr, "%c\n", temp->duration);
+			temp = temp->next;
+		} // while
+
 		fclose(fileptr);
 	}
 }

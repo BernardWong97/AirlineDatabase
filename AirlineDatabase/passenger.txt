@@ -1,13 +1,3 @@
-19970605
-Bernard
-Wong
-1997
-ben.wc88@gmail.com
-3
-1
-b
-d
-
 19460614
 Donald
 Trump
@@ -17,7 +7,6 @@ donald_trump@gmail.com
 4
 a
 b
-
 19540129
 Oprah
 Winfrey
@@ -27,7 +16,6 @@ operah@hotmail.com
 3
 a
 c
-
 19750502
 David
 Beckham
@@ -37,7 +25,6 @@ beckham@live.com
 2
 c
 d
-
 19850205
 Cristiano
 Ronaldo
@@ -47,3 +34,12 @@ football4life@eksdee.com
 4
 b
 a
+19970605
+Bernard
+Wong
+1997
+ben.wc88@gmail.com
+3
+1
+b
+d
