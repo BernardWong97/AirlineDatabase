@@ -136,14 +136,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FileHandling.c" />
-    <ClCompile Include="Functions.c" />
+    <ClCompile Include="Menu.c" />
     <ClCompile Include="Linkedlist.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="Passenger.c" />
     <ClCompile Include="Search.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileHandling.h" />
-    <ClInclude Include="Functions.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="Passenger.h" />
     <ClInclude Include="Linkedlist.h" />
     <ClInclude Include="Search.h" />
   </ItemGroup>

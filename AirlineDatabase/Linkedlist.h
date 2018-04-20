@@ -1,13 +1,7 @@
 #ifndef LINKEDLIST
 #define LINKEDLIST
-#include <stdio.h>
-#include <stdlib.h>
-#include <conio.h>
-#include <windows.h>
 
-#include "Functions.h"
-#include "Search.h"
-#include "FileHandling.h"
+#include "Passenger.h"
 
 // Node
 struct passenger {

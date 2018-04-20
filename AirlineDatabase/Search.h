@@ -1,7 +1,7 @@
 #ifndef SEARCH
 #define SEARCH
 
-#include "Linkedlist.h"
+#include "Passenger.h"
 
 int searchPassenger(struct passenger* top);
 int passportSearch(struct passenger* top);

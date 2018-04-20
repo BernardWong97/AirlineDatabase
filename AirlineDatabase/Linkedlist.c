@@ -157,36 +157,52 @@ void deletePassenger(struct passenger** top, struct passenger** bottom) {
 	struct passenger* temp2;
 	int count = 0;
 	int index;
+	char choice;
 
 	index = searchPassenger(*top);
+
 	temp = *top;
 
 	if (index != -1) {
-		while (count != index) {
-			temp = temp->next;
-			count++;
+		printf("\nAre you sure you want to delete this passenger? (y/n): ");
+		scanf(" %c", &choice);
+
+		while (!(choice == 'y' || choice == 'n')) {
+			printf("Invalid input, y or n only.\n");
+			printf("Please enter your choice: ");
+			scanf(" %c", &choice);
 		}
 
-		if ((*top)->next == NULL) {
-			*top = NULL;
-			*bottom = NULL;
-		}
-		else if (index == 0) {
-			*top = temp->next;
-			(*top)->previous = NULL;
-		}
-		else if (index == listLength(*top) - 1) {
-			*bottom = temp->previous;
-			(*bottom)->next = NULL;
+		if (choice == 'y') {
+			while (count != index) {
+				temp = temp->next;
+				count++;
+			}
+
+			if ((*top)->next == NULL) {
+				*top = NULL;
+				*bottom = NULL;
+			}
+			else if (index == 0) {
+				*top = temp->next;
+				(*top)->previous = NULL;
+			}
+			else if (index == listLength(*top) - 1) {
+				*bottom = temp->previous;
+				(*bottom)->next = NULL;
+			}
+			else {
+				temp2 = temp->previous;
+				temp2->next = temp->next;
+				temp2 = temp->next;
+				temp2->previous = temp->previous;
+			}
+
+			free(temp);
+			printf("\nPassenger Successfully Deleted.\n");
 		}
 		else {
-			temp2 = temp->previous;
-			temp2->next = temp->next;
-			temp2 = temp->next;
-			temp2->previous = temp->previous;
+			printf("\nDeletion Canceled.\n");
 		}
-
-		free(temp);
-		printf("\nPassenger Successfully Deleted.\n");
 	}
 }

@@ -11,7 +11,7 @@ int searchPassenger(struct passenger* top) {
 	scanf("%d", &choice);
 
 	while (!(choice == 1 || choice == 2)) {
-		printf("Invalid input, 1 and 2 only.\n");
+		printf("Invalid input, 1 or 2 only.\n");
 		printf("Please enter your choice: ");
 		scanf(" %d", &choice);
 	}
