@@ -148,6 +148,7 @@
     <ClInclude Include="Search.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="login.txt" />
     <Text Include="passenger.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

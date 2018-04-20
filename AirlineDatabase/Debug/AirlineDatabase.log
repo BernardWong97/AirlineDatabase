@@ -1,1 +1,5 @@
-﻿  AirlineDatabase.vcxproj -> C:\Users\ASUS\source\repos\AirlineDatabase\Debug\AirlineDatabase.exe
+﻿  main.c
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\main.c(66): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\main.c(8): warning C4101: 'position': unreferenced local variable
+  AirlineDatabase.vcxproj -> C:\Users\ASUS\source\repos\AirlineDatabase\Debug\AirlineDatabase.exe

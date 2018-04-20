@@ -3,7 +3,7 @@
 int displayMenu() {
 	int choice;
 
-	printf("\n---------------------------------------------------------------\n");
+	printf("\n+-------------------------------------------------------------+\n");
 	printf("|1. Add a passenger                                           |\n");
 	printf("|2. Display all passenger                                     |\n");
 	printf("|3. Display passenger details                                 |\n");
@@ -13,11 +13,19 @@ int displayMenu() {
 	printf("|7. Print all passenger details into a report file            |\n");
 	printf("|8. List all the passenger from UK in order of year born      |\n");
 	printf("|-1. Exit                                                     |\n");
-	printf("---------------------------------------------------------------");
+	printf("+-------------------------------------------------------------+");
 	printf("\nPlease enter one of the following options: ");
 	scanf("%d", &choice);
 
 	return choice;
+}
+
+void displayHeader() {
+	printf("+============================================================+\n");
+	printf("*                                                            *\n");
+	printf("*   Welcome to XYZ Airport Passenger Statistic Application   *\n");
+	printf("*                                                            *\n");
+	printf("+============================================================+\n");
 }
 
 void inputPassenger(struct passenger* newNode, struct passenger** top) {

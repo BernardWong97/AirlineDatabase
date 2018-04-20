@@ -6,9 +6,23 @@ void main() {
 	struct passenger* tailPtr = NULL;
 	int choice;
 	int position;
+	int log;
 
-	printf("========= XYZ Airport Passenger Statistic Application =========\n");
+	displayHeader();
+	log = login();
+	while (log != 1) {
+		system("@cls||clear");
+		displayHeader();
+		printf("The Username Or Password is Incorrect.\n");
+		log = login();
+	}
+
+	system("@cls||clear");
+	displayHeader();
 	initLinkedList(&headPtr, &tailPtr);
+	Sleep(500);
+	system("@cls||clear");
+	displayHeader();
 	choice = displayMenu();
 
 	while (choice != -1) {
@@ -48,5 +62,6 @@ void main() {
 	} // while
 
 	updateLinkedList(headPtr);
+	printf("\n==Program Terminated==");
 	getch();
 } // main()

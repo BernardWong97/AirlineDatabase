@@ -4,6 +4,7 @@
 #include "Linkedlist.h"
 
 int displayMenu();
+void displayHeader();
 void inputPassenger(struct passenger* newNode, struct passenger** top);
 void updateDetails(struct passenger* temp);
 int validatePassport(int passportNum, struct passenger** top);

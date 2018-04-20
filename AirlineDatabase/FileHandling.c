@@ -10,6 +10,7 @@ void initLinkedList(struct passenger** top, struct passenger** bottom) {
 	if (fileptr == NULL) {
 		printf("!- Warning -!\n");
 		printf("!- The File \"passenger.txt\" Does Not Exist -!\n");
+		printf("!- Warning -!\n");
 	}
 	else {
 		printf("Loading Data From Database");
@@ -69,6 +70,7 @@ void updateLinkedList(struct passenger* top) {
 	if (fileptr == NULL) {
 		printf("!- Warning -!\n");
 		printf("!- The File \"passenger.txt\" Does Not Exist -!\n");
+		printf("!- Warning -!\n");
 	}
 	else {
 		while (temp != NULL) {
@@ -85,5 +87,71 @@ void updateLinkedList(struct passenger* top) {
 		} // while
 
 		fclose(fileptr);
+	}
+}
+
+int login() {
+	FILE* fileptr;
+	char username[7];
+	char inputName[30];
+	char password[7];
+	char inputPass[30];
+	int i = 0;
+	char c;
+
+	printf("Username: ");
+	scanf("%s", inputName);
+	printf("Password: ");
+
+	do {
+		c = getch();
+		if (c != '\r') {
+			if (c != '\b') {
+				inputPass[i] = c;
+				printf("*");
+				i++;
+			}
+			else {
+				i--;
+				if (i < 0)
+					i++;
+				else
+					printf("\b \b");
+			}
+		}
+	} while (c != '\r');
+
+	inputPass[i] = '\0';
+
+	fileptr = fopen(LOGIN, "r");
+
+	if (fileptr == NULL) {
+		printf("!- Warning -!\n");
+		printf("!- The File \"passenger.txt\" Does Not Exist -!\n");
+		printf("!- Warning -!\n");
+	}
+	else {
+		while (!feof(fileptr))
+		{
+			fscanf(fileptr, "Username: %s\n", username);
+			fscanf(fileptr, "Password: %s\n", password);
+
+			if (strcmp(inputName, username) == 0 && strcmp(inputPass, password) == 0) {
+				printf("\nLogin in");
+				Sleep(250);
+				printf(".");
+				Sleep(250);
+				printf(".");
+				Sleep(250);
+				printf(".");
+				Sleep(250);
+				printf("\n");
+				fclose(fileptr);
+				return 1;
+			}
+		}
+
+		fclose(fileptr);
+		return 0;
 	}
 }
