@@ -36,6 +36,9 @@
     <ClCompile Include="Passenger.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Statistic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Linkedlist.h">
@@ -51,6 +54,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Passenger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Statistic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,24 +1,32 @@
-﻿  Linkedlist.c
+﻿  Statistic.c
 c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.h(7): warning C4005: 'PASSENGER': macro redefinition
   c:\users\asus\source\repos\airlinedatabase\airlinedatabase\passenger.h(2): note: see previous definition of 'PASSENGER'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(76): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(77): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(13): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(78): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(16): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(79): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(19): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(111): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(22): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(112): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(173): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(113): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(176): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(114): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(179): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(168): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\linkedlist.c(173): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(1272): note: see declaration of 'scanf'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(182): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(185): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(188): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(191): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(194): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\statistic.c(197): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\string.h(136): note: see declaration of 'strcpy'
   AirlineDatabase.vcxproj -> C:\Users\ASUS\source\repos\AirlineDatabase\Debug\AirlineDatabase.exe

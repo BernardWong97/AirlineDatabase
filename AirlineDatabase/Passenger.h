@@ -9,6 +9,7 @@
 #include "Menu.h"
 #include "Search.h"
 #include "FileHandling.h"
+#include "Statistic.h"
 
 void inputPassenger(struct passenger* newNode, struct passenger** top);
 void updateDetails(struct passenger* temp);

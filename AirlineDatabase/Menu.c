@@ -103,3 +103,44 @@ char durationMenu() {
 
 	return duration;
 }
+
+int statisticMenu() {
+	int criteria;
+	printf("\nWhich of the following criteria do you wish to generate statistics from (1-2): \n");
+	printf("\t(1) Travel Class\n");
+	printf("\t(2) Born Before 1980\n");
+	printf("Please enter criteria: ");
+	scanf("%d", &criteria);
+
+	while (!(criteria == 1 || criteria == 2)) {
+		printf("\nInvalid input, 1 and 2 only.\n");
+		printf("Please enter criteria: ");
+		scanf("%d", &criteria);
+	}
+
+	if (criteria == 1)
+		criteria = classCriteriaMenu();
+	else
+		criteria = 5;
+
+	return criteria;
+}
+
+int classCriteriaMenu() {
+	int classCriteria;
+	printf("\nWhich travel class do you wish to generate statistics from (1-4):\n");
+	printf("\t(1) Economy\n");
+	printf("\t(2) Premium Economy\n");
+	printf("\t(3) Business Class\n");
+	printf("\t(4) First Class\n");
+	printf("Please enter travel class criteria: ");
+	scanf("%d", &classCriteria);
+
+	while (classCriteria < 1 || classCriteria > 4) {
+		printf("\nInvalid input, 1 to 4 only.\n");
+		printf("Please enter criteria: ");
+		scanf("%d", &classCriteria);
+	}
+
+	return classCriteria;
+}

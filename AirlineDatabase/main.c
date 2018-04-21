@@ -48,6 +48,7 @@ void main() {
 			deletePassenger(&headPtr, &tailPtr);
 			break;
 		case 6:
+			generateStatistics(headPtr);
 			break;
 		case 7:
 			break;

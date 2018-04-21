@@ -141,6 +141,7 @@
     <ClCompile Include="main.c" />
     <ClCompile Include="Passenger.c" />
     <ClCompile Include="Search.c" />
+    <ClCompile Include="Statistic.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FileHandling.h" />
@@ -148,6 +149,7 @@
     <ClInclude Include="Passenger.h" />
     <ClInclude Include="Linkedlist.h" />
     <ClInclude Include="Search.h" />
+    <ClInclude Include="Statistic.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="login.txt" />
