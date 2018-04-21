@@ -6,6 +6,7 @@
 void generateStatistics(struct passenger* top);
 void calculateStatistics(int criteria, struct passenger* top);
 void travelStatistics(int criteria,  struct passenger* top);
+void bornBeforeStatistics(struct passenger* top);
 int fromUK(int ukCount, struct passenger* temp);
 int fromRoE(int RoECount, struct passenger* temp);
 int fromAsia(int asiaCount, struct passenger* temp);

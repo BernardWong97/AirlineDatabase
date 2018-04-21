@@ -30,8 +30,10 @@ void generateStatistics(struct passenger* top) {
 }
 
 void calculateStatistics(int criteria, struct passenger* top) {
-	if (criteria >= 1 || criteria <= 4)
+	if (criteria >= 1 && criteria <= 4)
 		travelStatistics(criteria, top);
+	else
+		bornBeforeStatistics(top);
 }
 
 void travelStatistics(int criteria,  struct passenger* top) {
@@ -95,8 +97,69 @@ void travelStatistics(int criteria,  struct passenger* top) {
 
 		displayStatistics(i, count, total);
 	}
+}
 
+void bornBeforeStatistics(struct passenger* top) {
+	struct passenger* temp;
+	int total = 0;
+	int count;
+	int ukCount = 0, RoECount = 0, asiaCount = 0, americasCount = 0, ausCount = 0;
+	int oneDay = 0, threeDays = 0, sevenDays = 0, overSevenDays = 0;
 
+	temp = top;
+
+	for (int i = 0; i < listLength(top); i++) {
+		if (temp->yearBorn < 1980) {
+			ukCount = fromUK(ukCount, temp);
+			RoECount = fromRoE(RoECount, temp);
+			asiaCount = fromAsia(asiaCount, temp);
+			americasCount = fromAmericas(americasCount, temp);
+			ausCount = fromAustralasia(ausCount, temp);
+			oneDay = avgOneDay(oneDay, temp);
+			threeDays = avgThreeDays(threeDays, temp);
+			sevenDays = avgSevenDays(sevenDays, temp);
+			overSevenDays = avgOverSeven(overSevenDays, temp);
+			total++;
+		}
+
+		temp = temp->next;
+	} // for
+
+	for (int i = 0; i < 9; i++) {
+		switch (i) {
+		case 0:
+			count = ukCount;
+			break;
+		case 1:
+			count = RoECount;
+			break;
+		case 2:
+			count = asiaCount;
+			break;
+		case 3:
+			count = americasCount;
+			break;
+		case 4:
+			count = ausCount;
+			break;
+		case 5:
+			count = oneDay;
+			break;
+		case 6:
+			count = threeDays;
+			break;
+		case 7:
+			count = sevenDays;
+			break;
+		case 8:
+			count = overSevenDays;
+			break;
+		default:
+			printf("Error in calculating statistics.\n");
+		}
+
+		displayStatistics(i, count, total);
+	}
 }
 
 int fromUK(int ukCount, struct passenger* temp) {
