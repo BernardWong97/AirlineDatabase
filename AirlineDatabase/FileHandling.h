@@ -10,4 +10,6 @@
 void initLinkedList(struct passenger** top, struct passenger** bottom);
 void updateLinkedList(struct passenger* top);
 int login();
+void printReport(struct passenger* top);
+void printStatistics(struct passenger* top);
 #endif

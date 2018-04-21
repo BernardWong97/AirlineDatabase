@@ -155,3 +155,79 @@ int login() {
 		return 0;
 	}
 }
+
+void printReport(struct passenger* top) {
+	FILE* fileptr;
+	int finish;
+	struct passenger* temp;
+	int passengerCount = 1;
+	char region[15];
+	char travelClass[16];
+	char tripCount[32];
+	char duration[18];
+
+	fileptr = fopen(REPORT, "w");
+
+	if (fileptr == NULL) {
+		printf("!- Warning -!\n");
+		printf("!- The File \"report.txt\" Does Not Exist -!\n");
+		printf("!- Warning -!\n");
+	} 
+	else {
+		temp = top;
+
+		fprintf(fileptr, "===================Passenger Database===================");
+
+		while (temp != NULL) {
+			fprintf(fileptr, "\n==Passenger %d==\n", passengerCount);
+			fprintf(fileptr, "Passport Number: %d\n", temp->passportNum);
+			fprintf(fileptr, "First Name: %s\n", temp->firstName);
+			fprintf(fileptr, "Second Name: %s\n", temp->secondName);
+			fprintf(fileptr, "Year Born: %d\n", temp->yearBorn);
+			fprintf(fileptr, "Email Address: %s\n", temp->email);
+			strcpy(region, getRegion(temp->region));
+			strcpy(travelClass, getTravelClass(temp->travelClass));
+			strcpy(tripCount, getTripCount(temp->tripCount));
+			strcpy(duration, getDuration(temp->duration));
+			fprintf(fileptr, "Region: %s\n", region);
+			fprintf(fileptr, "Travel Class: %s\n", travelClass);
+			fprintf(fileptr, "Trip Count to Ireland: %s\n", tripCount);
+			fprintf(fileptr, "Stay Duration: %s\n", duration);
+			fprintf(fileptr, "================\n");
+			temp = temp->next;
+			passengerCount++;
+		} // while
+
+		fclose(fileptr);
+
+		printStatistics(top);
+
+		printf("\nFile Writing Complete.\n");
+	}
+}
+
+void printStatistics(struct passenger* top) {
+	FILE* fileptr;
+
+	fileptr = fopen(REPORT, "a");
+
+	if (fileptr == NULL) {
+		printf("!- Warning -!\n");
+		printf("!- The File \"report.txt\" Does Not Exist -!\n");
+		printf("!- Warning -!\n");
+	}
+	else {
+		fprintf(fileptr, "\n==========Statistics From Criteria \"Economy\"==========\n");
+		calculateStatistics(1, top, 1, fileptr);
+		fprintf(fileptr, "\n==========Statistics From Criteria \"Premium Economy\"==========\n");
+		calculateStatistics(2, top, 1, fileptr);
+		fprintf(fileptr, "\n==========Statistics From Criteria \"Business Class\"==========\n");
+		calculateStatistics(3, top, 1, fileptr);
+		fprintf(fileptr, "\n==========Statistics From Criteria \"First Class\"==========\n");
+		calculateStatistics(4, top, 1, fileptr);
+		fprintf(fileptr, "\n==========Statistics From Criteria \"Born Before 1980\"==========\n");
+		calculateStatistics(5, top, 1, fileptr);
+	}
+
+	fclose(fileptr);
+}

@@ -1,0 +1,223 @@
+===================Passenger Database===================
+==Passenger 1==
+Passport Number: 19401127
+First Name: Bruce
+Second Name: Lee
+Year Born: 1940
+Email Address: kung@fu.com
+Region: Asia
+Travel Class: Premium Economy
+Trip Count to Ireland: Less than three times per year
+Stay Duration: Less than 3 days
+================
+
+==Passenger 2==
+Passport Number: 19460614
+First Name: Donald
+Second Name: Trump
+Year Born: 1946
+Email Address: donald_trump@gmail.com
+Region: Americas
+Travel Class: First Class
+Trip Count to Ireland: Less than three times per year
+Stay Duration: Less than 3 days
+================
+
+==Passenger 3==
+Passport Number: 19540129
+First Name: Oprah
+Second Name: Winfrey
+Year Born: 1954
+Email Address: operah@hotmail.com
+Region: Americas
+Travel Class: Business Class
+Trip Count to Ireland: Less than three times per year
+Stay Duration: Less than 7 days
+================
+
+==Passenger 4==
+Passport Number: 19550828
+First Name: Bill
+Second Name: Gates
+Year Born: 1955
+Email Address: microsoft@outlook.com
+Region: Americas
+Travel Class: Business Class
+Trip Count to Ireland: Less than three times per year
+Stay Duration: Less than 7 days
+================
+
+==Passenger 5==
+Passport Number: 19681012
+First Name: Hugh
+Second Name: Jackman
+Year Born: 1968
+Email Address: wolverine@marvel.com
+Region: Australasia
+Travel Class: Economy
+Trip Count to Ireland: Less than five times per year
+Stay Duration: One day
+================
+
+==Passenger 6==
+Passport Number: 19710628
+First Name: Elon
+Second Name: Musk
+Year Born: 1971
+Email Address: tesla@spacex.com
+Region: Rest of Europe
+Travel Class: First Class
+Trip Count to Ireland: Less than three times per year
+Stay Duration: One day
+================
+
+==Passenger 7==
+Passport Number: 19750502
+First Name: David
+Second Name: Beckham
+Year Born: 1975
+Email Address: beckham@live.com
+Region: UK
+Travel Class: Premium Economy
+Trip Count to Ireland: More than five times per year
+Stay Duration: More than 7 days
+================
+
+==Passenger 8==
+Passport Number: 19840514
+First Name: Mark
+Second Name: Zuckerberg
+Year Born: 1984
+Email Address: facebook@analytica.com
+Region: Americas
+Travel Class: Business Class
+Trip Count to Ireland: More than five times per year
+Stay Duration: More than 7 days
+================
+
+==Passenger 9==
+Passport Number: 19850205
+First Name: Cristiano
+Second Name: Ronaldo
+Year Born: 1985
+Email Address: football4life@eksdee.com
+Region: Rest of Europe
+Travel Class: First Class
+Trip Count to Ireland: Less than five times per year
+Stay Duration: One day
+================
+
+==Passenger 10==
+Passport Number: 19888552
+First Name: Emma
+Second Name: Watson
+Year Born: 1990
+Email Address: hermione@hogwarts.com
+Region: UK
+Travel Class: Business Class
+Trip Count to Ireland: More than five times per year
+Stay Duration: Less than 3 days
+================
+
+==Passenger 11==
+Passport Number: 19970605
+First Name: Bernard
+Second Name: Wong
+Year Born: 1997
+Email Address: ben.wc88@gmail.com
+Region: Asia
+Travel Class: Economy
+Trip Count to Ireland: Less than five times per year
+Stay Duration: More than 7 days
+================
+
+==Passenger 12==
+Passport Number: 23918475
+First Name: Chris
+Second Name: Hemsworth
+Year Born: 1983
+Email Address: thor@marvel.com
+Region: Australasia
+Travel Class: Premium Economy
+Trip Count to Ireland: More than five times per year
+Stay Duration: Less than 7 days
+================
+
+==Passenger 13==
+Passport Number: 64195682
+First Name: Jackie
+Second Name: Chan
+Year Born: 1954
+Email Address: amazing@idol.com
+Region: Asia
+Travel Class: Premium Economy
+Trip Count to Ireland: More than five times per year
+Stay Duration: One day
+================
+
+==Passenger 14==
+Passport Number: 91827365
+First Name: Daniel
+Second Name: Radcliffe
+Year Born: 1989
+Email Address: potter@hogwarts.com
+Region: UK
+Travel Class: Economy
+Trip Count to Ireland: Less than three times per year
+Stay Duration: Less than 7 days
+================
+
+==========Statistics From Criteria "Economy"==========
+Percentage of passengers who travel from the UK : 33.33%
+Percentage of passengers who travel from the Rest of Europe : 0.00%
+Percentage of passengers who travel from the Asia : 33.33%
+Percentage of passengers who travel from the Americas : 0.00%
+Percentage of passengers who travel from the Australasia : 33.33%
+Percentage of passengers who spent on average one day in Ireland : 33.33%
+Percentage of passengers who spent on average less than 3 days in Ireland : 0.00%
+Percentage of passengers who spent on average less than 7 days in Ireland : 33.33%
+Percentage of passengers who spent on average more than 7 days in Ireland : 33.33%
+
+==========Statistics From Criteria "Premium Economy"==========
+Percentage of passengers who travel from the UK : 25.00%
+Percentage of passengers who travel from the Rest of Europe : 0.00%
+Percentage of passengers who travel from the Asia : 50.00%
+Percentage of passengers who travel from the Americas : 0.00%
+Percentage of passengers who travel from the Australasia : 25.00%
+Percentage of passengers who spent on average one day in Ireland : 25.00%
+Percentage of passengers who spent on average less than 3 days in Ireland : 25.00%
+Percentage of passengers who spent on average less than 7 days in Ireland : 25.00%
+Percentage of passengers who spent on average more than 7 days in Ireland : 25.00%
+
+==========Statistics From Criteria "Business Class"==========
+Percentage of passengers who travel from the UK : 25.00%
+Percentage of passengers who travel from the Rest of Europe : 0.00%
+Percentage of passengers who travel from the Asia : 0.00%
+Percentage of passengers who travel from the Americas : 75.00%
+Percentage of passengers who travel from the Australasia : 0.00%
+Percentage of passengers who spent on average one day in Ireland : 0.00%
+Percentage of passengers who spent on average less than 3 days in Ireland : 25.00%
+Percentage of passengers who spent on average less than 7 days in Ireland : 50.00%
+Percentage of passengers who spent on average more than 7 days in Ireland : 25.00%
+
+==========Statistics From Criteria "First Class"==========
+Percentage of passengers who travel from the UK : 0.00%
+Percentage of passengers who travel from the Rest of Europe : 66.67%
+Percentage of passengers who travel from the Asia : 0.00%
+Percentage of passengers who travel from the Americas : 33.33%
+Percentage of passengers who travel from the Australasia : 0.00%
+Percentage of passengers who spent on average one day in Ireland : 66.67%
+Percentage of passengers who spent on average less than 3 days in Ireland : 33.33%
+Percentage of passengers who spent on average less than 7 days in Ireland : 0.00%
+Percentage of passengers who spent on average more than 7 days in Ireland : 0.00%
+
+==========Statistics From Criteria "Born Before 1980"==========
+Percentage of passengers who travel from the UK : 12.50%
+Percentage of passengers who travel from the Rest of Europe : 12.50%
+Percentage of passengers who travel from the Asia : 25.00%
+Percentage of passengers who travel from the Americas : 37.50%
+Percentage of passengers who travel from the Australasia : 12.50%
+Percentage of passengers who spent on average one day in Ireland : 37.50%
+Percentage of passengers who spent on average less than 3 days in Ireland : 25.00%
+Percentage of passengers who spent on average less than 7 days in Ireland : 25.00%
+Percentage of passengers who spent on average more than 7 days in Ireland : 12.50%

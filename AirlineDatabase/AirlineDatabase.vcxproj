@@ -154,6 +154,7 @@
   <ItemGroup>
     <Text Include="login.txt" />
     <Text Include="passenger.txt" />
+    <Text Include="report.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

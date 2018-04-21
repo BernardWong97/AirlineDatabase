@@ -1,42 +1,51 @@
 #include "Statistic.h"
 
-void generateStatistics(struct passenger* top) {
+void generateStatistics(struct passenger* top, int report) {
 	int criteria;
 	char s[18];
-	criteria = statisticMenu();
 
-	switch (criteria) {
-	case 1:
-		strcpy(s, "Economy");
-		break;
-	case 2:
-		strcpy(s, "Premium Economy");
-		break;
-	case 3:
-		strcpy(s, "Business Class");
-		break;
-	case 4:
-		strcpy(s, "First Class");
-		break;
-	case 5:
-		strcpy(s, "Born Before 1980");
-		break;
-	default:
-		printf("Error outputting criteria.\n");
+	if (report == 0) {
+		FILE* fileptr = NULL;
+
+		criteria = statisticMenu();
+
+		switch (criteria) {
+		case 1:
+			strcpy(s, "Economy");
+			break;
+		case 2:
+			strcpy(s, "Premium Economy");
+			break;
+		case 3:
+			strcpy(s, "Business Class");
+			break;
+		case 4:
+			strcpy(s, "First Class");
+			break;
+		case 5:
+			strcpy(s, "Born Before 1980");
+			break;
+		default:
+			printf("Error outputting criteria.\n");
+		}
+
+		printf("\n==========Statistics From Criteria \"%s\"==========\n", s);
+		calculateStatistics(criteria, top, report, fileptr);
 	}
-
-	printf("\n==========Statistics From Criteria \"%s\"==========\n", s);
-	calculateStatistics(criteria, top);
+	else {
+		printStatistics(top);
+	}
+	
 }
 
-void calculateStatistics(int criteria, struct passenger* top) {
+void calculateStatistics(int criteria, struct passenger* top, int report, FILE* fileptr) {
 	if (criteria >= 1 && criteria <= 4)
-		travelStatistics(criteria, top);
+		travelStatistics(criteria, top, report, fileptr);
 	else
-		bornBeforeStatistics(top);
+		bornBeforeStatistics(top, report, fileptr);
 }
 
-void travelStatistics(int criteria,  struct passenger* top) {
+void travelStatistics(int criteria,  struct passenger* top, int report, FILE* fileptr) {
 	struct passenger* temp;
 	int total = 0;
 	int count;
@@ -95,11 +104,11 @@ void travelStatistics(int criteria,  struct passenger* top) {
 			printf("Error in calculating statistics.\n");
 		}
 
-		displayStatistics(i, count, total);
+		displayStatistics(i, count, total, report, fileptr);
 	}
 }
 
-void bornBeforeStatistics(struct passenger* top) {
+void bornBeforeStatistics(struct passenger* top, int report, FILE* fileptr) {
 	struct passenger* temp;
 	int total = 0;
 	int count;
@@ -158,7 +167,7 @@ void bornBeforeStatistics(struct passenger* top) {
 			printf("Error in calculating statistics.\n");
 		}
 
-		displayStatistics(i, count, total);
+		displayStatistics(i, count, total, report, fileptr);
 	}
 }
 
@@ -225,7 +234,7 @@ int avgOverSeven(int overSevenDays, struct passenger* temp) {
 	return overSevenDays;
 }
 
-void displayStatistics(int i, int count, int total) {
+void displayStatistics(int i, int count, int total, int report, FILE* fileptr) {
 	char s[45];
 	float percentage;
 
@@ -263,5 +272,18 @@ void displayStatistics(int i, int count, int total) {
 		printf("Error in outputting statistics.\n");
 	}
 
-	printf("Percentage of passengers who %s : %.2f%%\n", s, percentage);
+	if (report == 1) {
+		if (fileptr == NULL)
+		{
+			printf("!- Warning -!\n");
+			printf("!- The File \"report.txt\" Does Not Exist -!\n");
+			printf("!- Warning -!\n");
+		}
+		else {
+			fprintf(fileptr, "Percentage of passengers who %s : %.2f%%\n", s, percentage);
+		}
+	}
+	else {
+		printf("Percentage of passengers who %s : %.2f%%\n", s, percentage);
+	}
 }

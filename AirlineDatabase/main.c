@@ -48,9 +48,10 @@ void main() {
 			deletePassenger(&headPtr, &tailPtr);
 			break;
 		case 6:
-			generateStatistics(headPtr);
+			generateStatistics(headPtr, 0);
 			break;
 		case 7:
+			printReport(headPtr);
 			break;
 		case 8:
 			break;
