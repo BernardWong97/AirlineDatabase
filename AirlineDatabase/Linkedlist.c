@@ -205,7 +205,7 @@ void deletePassenger(struct passenger** top, struct passenger** bottom) {
 				(*top)->previous = NULL;
 			}
 			else if (index == listLength(*top) - 1) {
-				// if last passenger of the list
+				// delete last passenger of the list
 				*bottom = temp->previous;
 				(*bottom)->next = NULL;
 			}

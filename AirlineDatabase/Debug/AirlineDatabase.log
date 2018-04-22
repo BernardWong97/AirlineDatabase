@@ -230,7 +230,7 @@ c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(248): 
   Generating Code...
 c:\users\asus\source\repos\airlinedatabase\airlinedatabase\filehandling.c(178): warning C4715: 'login': not all control paths return a value
 c:\users\asus\source\repos\airlinedatabase\airlinedatabase\passenger.c(191): warning C4172: returning address of local variable or temporary: tripCount
-c:\users\asus\source\repos\airlinedatabase\airlinedatabase\passenger.c(146): warning C4172: returning address of local variable or temporary: region
 c:\users\asus\source\repos\airlinedatabase\airlinedatabase\passenger.c(170): warning C4172: returning address of local variable or temporary: travelClass
+c:\users\asus\source\repos\airlinedatabase\airlinedatabase\passenger.c(146): warning C4172: returning address of local variable or temporary: region
 c:\users\asus\source\repos\airlinedatabase\airlinedatabase\passenger.c(215): warning C4172: returning address of local variable or temporary: duration
   AirlineDatabase.vcxproj -> C:\Users\ASUS\source\repos\AirlineDatabase\Debug\AirlineDatabase.exe

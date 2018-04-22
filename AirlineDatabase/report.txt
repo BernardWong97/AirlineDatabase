@@ -28,11 +28,11 @@ Passport Number: 19460614
 First Name: Donald
 Second Name: Trump
 Year Born: 1946
-Email Address: donald_trump@gmail.com
+Email Address: white_house@usa.com
 Region: Americas
 Travel Class: First Class
-Trip Count to Ireland: Less than three times per year
-Stay Duration: Less than 3 days
+Trip Count to Ireland: More than five times per year
+Stay Duration: One day
 ================
 
 ==Passenger 4==
@@ -266,8 +266,8 @@ Percentage of passengers who travel from the Rest of Europe : 50.00%
 Percentage of passengers who travel from the Asia : 25.00%
 Percentage of passengers who travel from the Americas : 25.00%
 Percentage of passengers who travel from the Australasia : 0.00%
-Percentage of passengers who spent on average one day in Ireland : 50.00%
-Percentage of passengers who spent on average less than 3 days in Ireland : 25.00%
+Percentage of passengers who spent on average one day in Ireland : 75.00%
+Percentage of passengers who spent on average less than 3 days in Ireland : 0.00%
 Percentage of passengers who spent on average less than 7 days in Ireland : 25.00%
 Percentage of passengers who spent on average more than 7 days in Ireland : 0.00%
 
@@ -277,7 +277,7 @@ Percentage of passengers who travel from the Rest of Europe : 16.67%
 Percentage of passengers who travel from the Asia : 25.00%
 Percentage of passengers who travel from the Americas : 25.00%
 Percentage of passengers who travel from the Australasia : 8.33%
-Percentage of passengers who spent on average one day in Ireland : 25.00%
-Percentage of passengers who spent on average less than 3 days in Ireland : 33.33%
+Percentage of passengers who spent on average one day in Ireland : 33.33%
+Percentage of passengers who spent on average less than 3 days in Ireland : 25.00%
 Percentage of passengers who spent on average less than 7 days in Ireland : 25.00%
 Percentage of passengers who spent on average more than 7 days in Ireland : 16.67%

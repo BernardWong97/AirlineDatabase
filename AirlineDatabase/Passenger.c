@@ -73,7 +73,7 @@ void updateDetails(struct passenger* temp) {
 	temp->duration = durationMenu();
 } //updateDetails()
 
-// check if the passport number is already exists in the database (return 1 if did not exists or 1 if exists)
+// check if the passport number is already exists in the database (return 1 if did not exists or 0 if exists)
 int validatePassport(int passportNum, struct passenger** top) {
 	struct passenger* temp;
 
@@ -214,4 +214,3 @@ char* getDuration(char num) {
 
 	return duration;
 } // getDuration()
-
