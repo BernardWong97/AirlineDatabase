@@ -1,5 +1,8 @@
+// Search.c
+
 #include "Search.h"
 
+// search the passenger using either passport number of full name (return the index of the passenger found in the list or -1 if not found)
 int searchPassenger(struct passenger* top) {
 	int choice;
 	int index;
@@ -14,18 +17,19 @@ int searchPassenger(struct passenger* top) {
 		printf("Invalid input, 1 or 2 only.\n");
 		printf("Please enter your choice: ");
 		scanf(" %d", &choice);
-	}
+	} // while validation
 
 	if (choice == 1) {
 		index = passportSearch(top);
 	}
 	else {
 		index = nameSearch(top);
-	}
+	} // if determine using passport number or name for searching
 
 	return index;
-}
+} // searchPassenger()
 
+// search passenger by passport number (return the index if found and -1 if not found)
 int passportSearch(struct passenger* top) {
 	struct passenger* temp;
 	int passportNum;
@@ -39,14 +43,16 @@ int passportSearch(struct passenger* top) {
 
 	for (int i = 0; i < listLength(top); i++) {
 		if (temp->passportNum == passportNum) {
-			found = 1;
+			// stop the loop
 			i = listLength(top);
+			found = 1;
 		}
 		else {
+			// continue the iteration
 			temp = temp->next;
 			count++;
-		} // if..else
-	} // for
+		} // if passport number matches
+	} // for iterate through the list
 
 	if (found == 1) {
 		displayIndexPassenger(top, count);
@@ -54,11 +60,12 @@ int passportSearch(struct passenger* top) {
 	}
 	else {
 		printf("The passenger does not exist in the database.\n");
-	}
+	} // if found passenger
 
 	return -1;
-}
+} // passportSearch()
 
+// search passenger by first and second name (return the index if found and -1 if not found)
 int nameSearch(struct passenger* top) {
 	struct passenger* temp;
 	char sFirstName[20];
@@ -82,15 +89,18 @@ int nameSearch(struct passenger* top) {
 		strcpy(firstName, temp->firstName);
 		strcpy(secondName, temp->secondName);
 		strcpy(fullName, strcat(firstName, secondName));
+
 		if (strcmp(fullName, sFullName) == 0) {
+			// stop the loop
 			found = 1;
 			i = listLength(top);
 		}
 		else {
+			// continue the iteration
 			temp = temp->next;
 			count++;
-		} // if..else
-	} // for
+		} // if full name match
+	} // for iterate through the list
 
 	if (found == 1) {
 		displayIndexPassenger(top, count);
@@ -98,7 +108,7 @@ int nameSearch(struct passenger* top) {
 	}
 	else {
 		printf("The passenger does not exist in the database.\n");
-	}
+	} // if passenger found
 
 	return -1;
-}
+} // nameSearch()

@@ -1,8 +1,11 @@
+// Menu.h
+
 #ifndef MENU
 #define MENU
 
-#include "Menu.h"
+#include "Passenger.h"
 
+// function prototypes
 int displayMenu();
 void displayHeader();
 int regionMenu();
@@ -11,4 +14,4 @@ char tripCountMenu();
 char durationMenu();
 int statisticMenu();
 int classCriteriaMenu();
-#endif
+#endif // MENU

@@ -1,5 +1,8 @@
+// Menu.c
+
 #include "Passenger.h"
 
+// display main menu and return user input choice
 int displayMenu() {
 	int choice;
 
@@ -18,18 +21,21 @@ int displayMenu() {
 	scanf("%d", &choice);
 
 	return choice;
-}
+} // displayMenu()
 
+// display the header of the program
 void displayHeader() {
 	printf("+============================================================+\n");
 	printf("*                                                            *\n");
 	printf("*     Welcome to XYZ Airport Passenger Statistic System      *\n");
 	printf("*                                                            *\n");
 	printf("+============================================================+\n");
-}
+} // displayHeader()
 
+// display menu for prompt region input and return user input
 int regionMenu() {
 	int region;
+
 	printf("Which of the following areas did you travel from (1-5):\n");
 	printf("\t(1) UK\n");
 	printf("\t(2) Rest of Europe\n");
@@ -43,13 +49,15 @@ int regionMenu() {
 		printf("\nInvalid input, 1 to 5 only.\n");
 		printf("Please enter your region: ");
 		scanf("%d", &region);
-	}
+	} // while validate
 
 	return region;
-}
+} // regionMenu()
 
+// display menu for prompt travel class input and return user input
 int travelClassMenu() {
 	int travelClass;
+
 	printf("Which of the following travel class did you use to travel to Ireland (1-4):\n");
 	printf("\t(1) Economy\n");
 	printf("\t(2) Premium Economy\n");
@@ -62,13 +70,15 @@ int travelClassMenu() {
 		printf("\nInvalid input, 1 to 4 only.\n");
 		printf("Please enter your travel class: ");
 		scanf("%d", &travelClass);
-	}
+	} // while validate
 
 	return travelClass;
-}
+} // travelClassMenu()
 
+// display menu for prompt trip count input and return user input
 char tripCountMenu() {
 	char travelClass;
+
 	printf("How many trips to Ireland do you make per year (a/b/c):\n");
 	printf("\t(a) Less than three times per year\n");
 	printf("\t(b) Less than five times per year\n");
@@ -80,13 +90,15 @@ char tripCountMenu() {
 		printf("\nInvalid input, a / b / c only.\n");
 		printf("Please enter a / b / c: ");
 		scanf(" %c", &travelClass);
-	}
+	} // while validate
 
 	return travelClass;
-}
+} // tripCountMenu()
 
+// display menu for prompt trip duration input and return user input
 char durationMenu() {
 	char duration;
+
 	printf("On average how long is your duration (a/b/c/d):\n");
 	printf("\t(a) One day\n");
 	printf("\t(b) Less than 3 days\n");
@@ -99,11 +111,12 @@ char durationMenu() {
 		printf("\nInvalid input, a / b / c / d only.\n");
 		printf("Please enter a / b / c / d: ");
 		scanf(" %c", &duration);
-	}
+	} // while validate
 
 	return duration;
-}
+} // durationMenu()
 
+// display menu for prompt statistic criteria and return criteria
 int statisticMenu() {
 	int criteria;
 	printf("\nWhich of the following criteria do you wish to generate statistics from (1-2): \n");
@@ -116,18 +129,21 @@ int statisticMenu() {
 		printf("\nInvalid input, 1 and 2 only.\n");
 		printf("Please enter criteria: ");
 		scanf("%d", &criteria);
-	}
+	} // while validate
 
+	// call classCriteriaMenu for 1 and set criteria = 5 for born before 1980
 	if (criteria == 1)
 		criteria = classCriteriaMenu();
 	else
 		criteria = 5;
 
 	return criteria;
-}
+} // statisticMenu()
 
+// display menu for prompt travel class statistic criteria and return criteria
 int classCriteriaMenu() {
 	int classCriteria;
+
 	printf("\nWhich travel class do you wish to generate statistics from (1-4):\n");
 	printf("\t(1) Economy\n");
 	printf("\t(2) Premium Economy\n");
@@ -140,7 +156,7 @@ int classCriteriaMenu() {
 		printf("\nInvalid input, 1 to 4 only.\n");
 		printf("Please enter criteria: ");
 		scanf("%d", &classCriteria);
-	}
+	} // while validate
 
 	return classCriteria;
-}
+} // classCriteriaMenu()

@@ -1,8 +1,10 @@
+// Statistic.h
 #ifndef STATISTICS
 #define STATISTICS
 
 #include "Passenger.h"
 
+// function prototypes
 void generateStatistics(struct passenger* top, int report);
 void calculateStatistics(int criteria, struct passenger* top, int report, FILE* fileptr);
 void travelStatistics(int criteria,  struct passenger* top, int report, FILE* fileptr);
@@ -17,4 +19,4 @@ int avgThreeDays(int threeDays, struct passenger* temp);
 int avgSevenDays(int sevenDays, struct passenger* temp);
 int avgOverSeven(int overSevenDays, struct passenger* temp);
 void displayStatistics(int i, int count, int total, int report, FILE* fileptr);
-#endif
+#endif // STATISTICS

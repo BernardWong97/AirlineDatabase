@@ -1,9 +1,11 @@
+// Linkedlist.h
+
 #ifndef LINKEDLIST
 #define LINKEDLIST
 
 #include "Passenger.h"
 
-// Node
+// passenger struct
 struct passenger {
 	int passportNum;
 	char firstName[20];
@@ -18,7 +20,7 @@ struct passenger {
 	struct passenger* previous;
 };
 
-// Function prototypes
+// function prototypes
 void addPassengerAtStart(struct passenger** top, struct passenger** bottom, struct passenger* newNode);
 void addPassenger(struct passenger** top, struct passenger** bottom);
 void displayList(struct passenger* top);
@@ -27,4 +29,4 @@ int listLength(struct passenger* top);
 void updatePassenger(struct passenger* top);
 void deletePassenger(struct passenger** top, struct passenger** bottom);
 void sortedUKPassenger(struct passenger* top);
-#endif // !LINKEDLIST
+#endif // LINKEDLIST

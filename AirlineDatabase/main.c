@@ -1,6 +1,7 @@
+// Main.c
+
 #include "Passenger.h"
 
-// Main
 void main() {
 	struct passenger* headPtr = NULL;
 	struct passenger* tailPtr = NULL;
@@ -8,6 +9,7 @@ void main() {
 	int position;
 	int log;
 
+	// login
 	displayHeader();
 	log = login();
 	while (log != 1) {
@@ -15,13 +17,15 @@ void main() {
 		displayHeader();
 		printf("The Username Or Password is Incorrect.\n");
 		log = login();
-	}
+	} // while invalid login
 
 	system("@cls||clear");
 	displayHeader();
-	initLinkedList(&headPtr, &tailPtr);
+	initLinkedList(&headPtr, &tailPtr); // Load linked list from file
 	Sleep(500);
 	system("@cls||clear");
+
+	// main menu
 	displayHeader();
 	choice = displayMenu();
 
@@ -36,7 +40,7 @@ void main() {
 			}
 			else {
 				displayList(headPtr);
-			}
+			} // if linkedlist is empty
 			break;
 		case 3:
 			searchPassenger(headPtr);
@@ -59,17 +63,16 @@ void main() {
 			}
 			else {
 				sortedUKPassenger(headPtr);
-			}
+			} // if linkedlist is empty
 			break;
 		default:
-			// Validation
-			printf("Please enter 1 to 8 only or -1 to exit.\n");
-		} // switch
+			printf("Please enter 1 to 8 only or -1 to exit.\n"); // validation
+		} // switch main menu user input choice
 
 		choice = displayMenu();
-	} // while
+	} // while -1 sentinel control
 
-	updateLinkedList(headPtr);
-	printf("\n==Program Terminated==");
+	updateLinkedList(headPtr); // update linked list when program terminated
+	printf("\n==Program Terminated==\n");
 	getch();
 } // main()
