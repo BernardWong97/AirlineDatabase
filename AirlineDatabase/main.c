@@ -54,6 +54,12 @@ void main() {
 			printReport(headPtr);
 			break;
 		case 8:
+			if (headPtr == NULL) {
+				printf("\nThe database is empty.\n");
+			}
+			else {
+				sortedUKPassenger(headPtr);
+			}
 			break;
 		default:
 			// Validation

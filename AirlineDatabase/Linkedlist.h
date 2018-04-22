@@ -26,5 +26,5 @@ void displayIndexPassenger(struct passenger* top, int index);
 int listLength(struct passenger* top);
 void updatePassenger(struct passenger* top);
 void deletePassenger(struct passenger** top, struct passenger** bottom);
-
+void sortedUKPassenger(struct passenger* top);
 #endif // !LINKEDLIST

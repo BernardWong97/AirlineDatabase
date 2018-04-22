@@ -206,3 +206,65 @@ void deletePassenger(struct passenger** top, struct passenger** bottom) {
 		}
 	}
 }
+
+
+void sortedUKPassenger(struct passenger* top) {
+	struct passenger* tempHead = NULL;
+	struct passenger* newNode;
+	struct passenger* temp;
+	struct passenger* temp2;
+	struct passenger* temp3;
+	
+	temp = top;
+
+	for (int i = 0; i < listLength(top); i++) {
+		newNode = (struct passenger*)malloc(sizeof(struct passenger));
+		temp2 = tempHead;
+
+		if (temp->region == 1) {
+			newNode->passportNum = temp->passportNum;
+			strcpy(newNode->firstName, temp->firstName);
+			strcpy(newNode->secondName, temp->secondName);
+			newNode->yearBorn = temp->yearBorn;
+			strcpy(newNode->email, temp->email);
+			newNode->region = temp->region;
+			newNode->travelClass = temp->travelClass;
+			newNode->tripCount = temp->tripCount;
+			newNode->duration = temp->duration;
+			newNode->previous = NULL;
+
+			if (tempHead == NULL) {
+				tempHead = newNode;
+				newNode->next = NULL;
+			}
+			else {
+				if (newNode->yearBorn >= temp2->yearBorn) {
+					while (temp2->next != NULL && newNode->yearBorn >= temp2->yearBorn) {
+						temp2 = temp2->next;
+					}
+
+					if (newNode->yearBorn < temp2->yearBorn) {
+						newNode->next = temp2;
+						temp3 = temp2->previous;
+						temp2->previous = newNode;
+						newNode->previous = temp3;
+						temp3->next = newNode;
+					}
+					else {
+						newNode->next = temp2->next;
+						newNode->previous = temp2;
+						temp2->next = newNode;
+					}
+				}
+				else {
+					newNode->next = temp2;
+					tempHead = newNode;
+				}
+			}
+		}
+
+		temp = temp->next;
+	}
+	
+	displayList(tempHead);
+}
