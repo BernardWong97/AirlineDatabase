@@ -144,6 +144,18 @@ Stay Duration: Less than 7 days
 ================
 
 ==Passenger 13==
+Passport Number: 46850007
+First Name: Daniel
+Second Name: Craig
+Year Born: 1968
+Email Address: james@bond.com
+Region: UK
+Travel Class: Economy
+Trip Count to Ireland: More than five times per year
+Stay Duration: More than 7 days
+================
+
+==Passenger 14==
 Passport Number: 64195682
 First Name: Jackie
 Second Name: Chan
@@ -155,7 +167,19 @@ Trip Count to Ireland: More than five times per year
 Stay Duration: One day
 ================
 
-==Passenger 14==
+==Passenger 15==
+Passport Number: 71439208
+First Name: Simon
+Second Name: Cowell
+Year Born: 1959
+Email Address: britian@gotTalent.com
+Region: UK
+Travel Class: Business Class
+Trip Count to Ireland: Less than five times per year
+Stay Duration: Less than 3 days
+================
+
+==Passenger 16==
 Passport Number: 91827365
 First Name: Daniel
 Second Name: Radcliffe
@@ -167,38 +191,50 @@ Trip Count to Ireland: Less than three times per year
 Stay Duration: Less than 7 days
 ================
 
-==========Statistics From Criteria "Economy"==========
-Percentage of passengers who travel from the UK : 33.33%
-Percentage of passengers who travel from the Rest of Europe : 0.00%
-Percentage of passengers who travel from the Asia : 33.33%
-Percentage of passengers who travel from the Americas : 0.00%
-Percentage of passengers who travel from the Australasia : 33.33%
-Percentage of passengers who spent on average one day in Ireland : 33.33%
-Percentage of passengers who spent on average less than 3 days in Ireland : 0.00%
-Percentage of passengers who spent on average less than 7 days in Ireland : 33.33%
-Percentage of passengers who spent on average more than 7 days in Ireland : 33.33%
+==Passenger 17==
+Passport Number: 97865643
+First Name: Cara
+Second Name: Delevingne
+Year Born: 1992
+Email Address: cara@del.com
+Region: UK
+Travel Class: Premium Economy
+Trip Count to Ireland: Less than three times per year
+Stay Duration: One day
+================
 
-==========Statistics From Criteria "Premium Economy"==========
-Percentage of passengers who travel from the UK : 25.00%
+==========Statistics From Criteria "Economy"==========
+Percentage of passengers who travel from the UK : 50.00%
 Percentage of passengers who travel from the Rest of Europe : 0.00%
-Percentage of passengers who travel from the Asia : 50.00%
+Percentage of passengers who travel from the Asia : 25.00%
 Percentage of passengers who travel from the Americas : 0.00%
 Percentage of passengers who travel from the Australasia : 25.00%
 Percentage of passengers who spent on average one day in Ireland : 25.00%
-Percentage of passengers who spent on average less than 3 days in Ireland : 25.00%
+Percentage of passengers who spent on average less than 3 days in Ireland : 0.00%
 Percentage of passengers who spent on average less than 7 days in Ireland : 25.00%
-Percentage of passengers who spent on average more than 7 days in Ireland : 25.00%
+Percentage of passengers who spent on average more than 7 days in Ireland : 50.00%
+
+==========Statistics From Criteria "Premium Economy"==========
+Percentage of passengers who travel from the UK : 40.00%
+Percentage of passengers who travel from the Rest of Europe : 0.00%
+Percentage of passengers who travel from the Asia : 40.00%
+Percentage of passengers who travel from the Americas : 0.00%
+Percentage of passengers who travel from the Australasia : 20.00%
+Percentage of passengers who spent on average one day in Ireland : 40.00%
+Percentage of passengers who spent on average less than 3 days in Ireland : 20.00%
+Percentage of passengers who spent on average less than 7 days in Ireland : 20.00%
+Percentage of passengers who spent on average more than 7 days in Ireland : 20.00%
 
 ==========Statistics From Criteria "Business Class"==========
-Percentage of passengers who travel from the UK : 25.00%
+Percentage of passengers who travel from the UK : 40.00%
 Percentage of passengers who travel from the Rest of Europe : 0.00%
 Percentage of passengers who travel from the Asia : 0.00%
-Percentage of passengers who travel from the Americas : 75.00%
+Percentage of passengers who travel from the Americas : 60.00%
 Percentage of passengers who travel from the Australasia : 0.00%
 Percentage of passengers who spent on average one day in Ireland : 0.00%
-Percentage of passengers who spent on average less than 3 days in Ireland : 25.00%
-Percentage of passengers who spent on average less than 7 days in Ireland : 50.00%
-Percentage of passengers who spent on average more than 7 days in Ireland : 25.00%
+Percentage of passengers who spent on average less than 3 days in Ireland : 40.00%
+Percentage of passengers who spent on average less than 7 days in Ireland : 40.00%
+Percentage of passengers who spent on average more than 7 days in Ireland : 20.00%
 
 ==========Statistics From Criteria "First Class"==========
 Percentage of passengers who travel from the UK : 0.00%
@@ -212,12 +248,12 @@ Percentage of passengers who spent on average less than 7 days in Ireland : 0.00
 Percentage of passengers who spent on average more than 7 days in Ireland : 0.00%
 
 ==========Statistics From Criteria "Born Before 1980"==========
-Percentage of passengers who travel from the UK : 12.50%
-Percentage of passengers who travel from the Rest of Europe : 12.50%
-Percentage of passengers who travel from the Asia : 25.00%
-Percentage of passengers who travel from the Americas : 37.50%
-Percentage of passengers who travel from the Australasia : 12.50%
-Percentage of passengers who spent on average one day in Ireland : 37.50%
-Percentage of passengers who spent on average less than 3 days in Ireland : 25.00%
-Percentage of passengers who spent on average less than 7 days in Ireland : 25.00%
-Percentage of passengers who spent on average more than 7 days in Ireland : 12.50%
+Percentage of passengers who travel from the UK : 30.00%
+Percentage of passengers who travel from the Rest of Europe : 10.00%
+Percentage of passengers who travel from the Asia : 20.00%
+Percentage of passengers who travel from the Americas : 30.00%
+Percentage of passengers who travel from the Australasia : 10.00%
+Percentage of passengers who spent on average one day in Ireland : 30.00%
+Percentage of passengers who spent on average less than 3 days in Ireland : 30.00%
+Percentage of passengers who spent on average less than 7 days in Ireland : 20.00%
+Percentage of passengers who spent on average more than 7 days in Ireland : 20.00%
